@@ -5,17 +5,14 @@ using UnityEngine;
 public class Memo : MonoBehaviour {
 
 	// Just a memo
-    // What did we do so far? And what are the goals?
-    // We were able to play around with textures and use blender to some extent
-    // we were able to change the background (aka skybox of the game)
-    // we got an idea for a certain game effect using triangles
-    // next, we could try to make a emission map.
+    // another thing. I am still wondering about the List thing.
+    // Let's image I had a list with all the ChildTriangles
 
-    // we got a goal now.
-    // we need to figure out how to set the emission property from inside a
-    // script.
+    // when I look for available positions, I make a foreach
+    // with this list, or even better use linq to get all the elements which
+    // satisfy a certain criteria.
 
-    // we found out how to alter that emission thing.
-    // we also found out how to debug properly in visual studio
+    // In this case, the gridPosition would be saved in each childTriangle.
+    // and we could actually make negative gridpositions.
 
 }

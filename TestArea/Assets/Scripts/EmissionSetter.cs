@@ -20,6 +20,6 @@ public class EmissionSetter : MonoBehaviour {
         float lerp = Mathf.PingPong(Time.time, duration) / duration;
         rend.material.SetColor("_EmissionColor", Color.Lerp(startVal, endVal, lerp));
         //rend.material.SetFloat("_Emission", lerp);
-        Debug.Log(lerp);
+        //Debug.Log(lerp);
     }
 }
