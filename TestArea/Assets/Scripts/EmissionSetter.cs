@@ -6,8 +6,9 @@ public class EmissionSetter : MonoBehaviour {
 
     public Color startVal = Color.red;
     public Color endVal = Color.black;
-    public float duration = 1.0F;
+    public float duration = 1.0f;
     public Renderer rend;
+    public float phase = 0f;
 
     void Start()
     {
@@ -17,9 +18,7 @@ public class EmissionSetter : MonoBehaviour {
 
     void Update()
     {
-        float lerp = Mathf.PingPong(Time.time, duration) / duration;
+        float lerp = Mathf.PingPong(Time.time + phase, duration) / duration;
         rend.material.SetColor("_EmissionColor", Color.Lerp(startVal, endVal, lerp));
-        //rend.material.SetFloat("_Emission", lerp);
-        //Debug.Log(lerp);
     }
 }

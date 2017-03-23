@@ -25,7 +25,7 @@ public class TriangleController : MonoBehaviour {
         // Get child's script
         var script = childTriangle.GetComponent<ChildTriangle>();
 
-        script.SetGridCoords(gridPos);
+        script.SetGridCoords(gridPos, transform.localRotation);
         childTriangleList.Add(childTriangle);
         UpdateAvailableSpawnPositions(gridPos);
     }
@@ -47,7 +47,7 @@ public class TriangleController : MonoBehaviour {
         }
 
         if (((gridPos.Z == 0 || gridPos.Z % 2 == 0) && (gridPos.Y == 0 || gridPos.Y % 2 == 0)) ||
-            (!(gridPos.Z == 0 || gridPos.Z % 2 == 0) && !(gridPos.Y == 0 || gridPos.Y % 2 == 0)))
+            !((gridPos.Z == 0 || gridPos.Z % 2 == 0) || (gridPos.Y == 0 || gridPos.Y % 2 == 0)))
         {
             gridPosCandidate = new GridPos(gridPos.Y - 1, gridPos.Z);
             if (!occupiedSpawnPositions.Contains(gridPosCandidate))
@@ -85,12 +85,13 @@ public class TriangleController : MonoBehaviour {
         availableSpawnPositions.Add(new GridPos(0, 0));
         // Spawn a ChildTriangle
         SpawnChildTriangle(new GridPos(0, 0));
-        StartCoroutine("Spawner");
+        //StartCoroutine("Spawner");
 	}
 	
 
 	void Update ()
 	{
+	    SpawnAtRandomPosition();
 
 	}
 }
