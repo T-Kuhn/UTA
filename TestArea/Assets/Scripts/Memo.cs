@@ -5,8 +5,7 @@ using UnityEngine;
 public class Memo : MonoBehaviour {
 
 	// Just a memo
-    // next thing to do:
-    // we need a way to get the distance of all the triangles relative to the mothertriangle
-    // this should be a private field of the childTriangle
+    // what are the next steps here?
+    // one might be to get the thing to rotate around a fixed point.
 
 }

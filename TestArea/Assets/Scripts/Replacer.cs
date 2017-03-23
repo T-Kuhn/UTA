@@ -5,6 +5,10 @@ using UnityEngine;
 public class Replacer : MonoBehaviour
 {
 
+    public GameObject CenterOfMovement;
+    [SerializeField] public float yDistance = 5.0f;
+    [SerializeField] public float zDistance = 5.0f;
+
     // Use this for initialization
     void Start()
     {
@@ -26,7 +30,7 @@ public class Replacer : MonoBehaviour
     private void onRails()
     {
         var t = Time.realtimeSinceStartup;
-        transform.localPosition = new Vector3(5*Mathf.Sin(t),1,5*Mathf.Cos(t));
+        transform.localPosition = new Vector3(1, yDistance * Mathf.Sin(t), zDistance * Mathf.Cos(t)) + CenterOfMovement.transform.position;
     }
 
     //
@@ -47,8 +51,3 @@ public class Replacer : MonoBehaviour
 
 }
 
-// now here's an idea
-// we build some kind of checkbox on this script
-// in order to decide which of the rotation modes we want to use.
-// Another idea:
-// Let's try to play that game in a higher resolution.
