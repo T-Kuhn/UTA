@@ -7,11 +7,20 @@ using UnityStandardAssets.Utility;
 public class MulticastEvent : MonoBehaviour
 {
     public delegate void MyDelegate();
+    public delegate void TestDelegate(string str);
     public event MyDelegate Activate;
 
     public X xobj;
     public Y yobj; 
 
+    public void doSomething(string str)
+    {
+        Debug.Log(str);
+    }
+    public void doSomethingelse(string str)
+    {
+        Debug.Log("something else: " + str);
+    }
     public void fire()
     {
         if (Activate != null)
@@ -25,6 +34,10 @@ public class MulticastEvent : MonoBehaviour
         yobj = new Y();
         Activate += new MyDelegate(xobj.Xhandler);
         Activate += new MyDelegate(yobj.Yhandler);
+        TestDelegate testdel = new TestDelegate(doSomething);
+        testdel("string");
+        testdel = new TestDelegate(doSomethingelse);
+        testdel("string");
         fire();
 	}
 }
