@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\Replacer.cs" />
     <Compile Include="Assets\Scripts\Rotater.cs" />
     <Compile Include="Assets\Scripts\TestCode\MulticastEvent.cs" />
+    <Compile Include="Assets\Scripts\TestCode\SortTest.cs" />
     <Compile Include="Assets\Scripts\TriangleController.cs" />
     <Compile Include="Assets\Scripts\misc\IntVector3.cs" />
   </ItemGroup>
