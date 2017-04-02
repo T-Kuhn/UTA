@@ -22,6 +22,24 @@ public class SortTest : MonoBehaviour {
         {
             Debug.Log("name: " + p.Name);
         }
+
+        Product prod = new Product("IDNAME0", "name0", 99.9m);
+        
+
+        Debug.Log("let's try to get a property of prod: " + prod.Name);
+
+        DoSomethingWithRefObj(prod);
+
+        Debug.Log("let's try to get a property of prod: " + prod.Name);
+
+
+
+    }
+
+    void DoSomethingWithRefObj(Product prod)
+    {
+        prod = null;
+        prod = new Product("new", "new1", 9.999m);
     }
 	
 	// Update is called once per frame
