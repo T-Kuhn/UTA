@@ -91,6 +91,8 @@
     <Compile Include="Assets\Scripts\TestCode\MulticastEvent.cs" />
     <Compile Include="Assets\Scripts\TestCode\SortTest.cs" />
     <Compile Include="Assets\Scripts\TriangleController.cs" />
+    <Compile Include="Assets\Scripts\Twirler.cs" />
+    <Compile Include="Assets\Scripts\UVMapping.cs" />
     <Compile Include="Assets\Scripts\misc\IntVector3.cs" />
   </ItemGroup>
   <ItemGroup>
