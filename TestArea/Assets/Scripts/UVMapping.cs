@@ -15,9 +15,13 @@ public class UVMapping : MonoBehaviour
             uvs[i] = new Vector2(vertices[i].x, vertices[i].z);
         }
 
-        uvs[0] = new Vector2(0.0f, 0.0f);
-        uvs[1] = new Vector2(0.5f, 0.5f);
-        uvs[2] = new Vector2(0.5f, 0.0f);
+        uvs[7] = new Vector2(0.5f, 1.0f);
+        uvs[9] = new Vector2(0.0f, 0.0f);
+        uvs[8] = new Vector2(1.0f, 0.0f);
+
+        uvs[0] = new Vector2(0.5f, 0.0f);
+        uvs[1] = new Vector2(0.0f, 1.0f);
+        uvs[2] = new Vector2(1.0f, 1.0f);
 
 
 
