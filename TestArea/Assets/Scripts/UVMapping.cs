@@ -10,10 +10,17 @@ public class UVMapping : MonoBehaviour
         Vector3[] vertices = mesh.vertices;
         Vector2[] uvs = new Vector2[vertices.Length];
 
-        for (int i = 0; i < uvs.Length; i++)
+        for (int i = 3; i < uvs.Length; i++)
         {
             uvs[i] = new Vector2(vertices[i].x, vertices[i].z);
         }
+
+        uvs[0] = new Vector2(0.0f, 0.0f);
+        uvs[1] = new Vector2(0.5f, 0.5f);
+        uvs[2] = new Vector2(0.5f, 0.0f);
+
+
+
         mesh.uv = uvs;
         // what did we figure out here?
         // we now know, that the line above has some serious effects on the way
