@@ -34,6 +34,9 @@ public class ChildTriangle : MonoBehaviour {
         }
         EmissionSetter es = GetComponent<EmissionSetter>();
         es.phase = -distanceToCenter / 10.0f;
+        UVMapper uvm = GetComponent<UVMapper>();
+        if (uvm != null)
+            uvm.GridPos = GridCoords;
     }
 
 }
