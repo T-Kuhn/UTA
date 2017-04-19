@@ -84,6 +84,8 @@
     <Compile Include="Assets\Scripts\ChildTriangle.cs" />
     <Compile Include="Assets\Scripts\ColorChanger.cs" />
     <Compile Include="Assets\Scripts\EmissionSetter.cs" />
+    <Compile Include="Assets\Scripts\GridController.cs" />
+    <Compile Include="Assets\Scripts\GridFish.cs" />
     <Compile Include="Assets\Scripts\GridPos.cs" />
     <Compile Include="Assets\Scripts\Memo.cs" />
     <Compile Include="Assets\Scripts\Replacer.cs" />
