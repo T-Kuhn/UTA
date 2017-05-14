@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\TriangleController.cs" />
     <Compile Include="Assets\Scripts\Twirler.cs" />
     <Compile Include="Assets\Scripts\UVMapper.cs" />
+    <Compile Include="Assets\Scripts\flowingTexture\FlowingTextureController.cs" />
     <Compile Include="Assets\Scripts\misc\IntVector3.cs" />
   </ItemGroup>
   <ItemGroup>
